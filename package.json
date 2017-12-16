@@ -1,0 +1,24 @@
+{
+  "name": "node-red-contrib-facebook-page-ds",
+  "node-red": {
+    "nodes": {
+      "fb-page-ds": "fb-page-ds.js"
+    }
+  },
+  "version": "1.0.0",
+  "main": "fb-page-ds.js",
+  "dependencies": {
+    "async": "^2.6.0",
+    "http": "0.0.0",
+    "https": "^1.0.0",
+    "lodash": "^4.17.4",
+    "moment": "^2.19.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alexander Plotkin",
+  "license": "ISC",
+  "description": ""
+}

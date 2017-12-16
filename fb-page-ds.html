@@ -1,0 +1,53 @@
+<script type="text/javascript">
+    RED.nodes.registerType('fb-page-ds',{
+        category: 'facebook',
+        color: '#4267b2',
+        defaults: {
+            name: {value:""},
+            pageId: {value: "", required: true, validator: RED.validators.number()},
+            pageName: {value: "", required: true},
+            fbAPIKey: {value: "", required: true},
+            apiVersion: {value: "v2.5", required: true}
+
+        },
+        inputs:1,
+        outputs:1,
+        icon: "icon.png",
+        label: function() {
+            return this.name||"fb-page-ds";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="fb-page-ds">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-pageName"><i class="icon-tag"></i> Page Name</label>
+        <input type="text" id="node-input-pageName" placeholder="Page Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-pageId"><i class="icon-tag"></i> Page Id</label>
+        <input type="text" id="node-input-pageId" placeholder="Page Id number">
+    </div>
+    <div class="form-row">
+        <label for="node-input-fbAPIKey"><i class="icon-certificate"></i> FB API Key</label>
+        <input type="text" id="node-input-fbAPIKey" placeholder="API Key">
+    </div>
+    <div class="form-row">
+        <label for="node-input-apiVersion"><i class="icon-star"></i> FB API Version</label>
+        <select type="text" id="node-input-apiVersion" placeholder="API Version">
+            <option value="v2.5" selected>v2.5</option>
+            <option value="v2.6">v2.6</option>
+            <option value="v2.7">v2.7</option>
+        </select>
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="fb-page-ds">
+    <p>A node retrieves data from facebook page (profile, posts, albums, videos and etc.)
+
+    </p>
+</script>
